@@ -1,0 +1,18 @@
+{
+    "North": {
+        "vehicles": 30,
+        "green_time": 30
+    },
+    "East": {
+        "vehicles": 10,
+        "green_time": 10
+    },
+    "South": {
+        "vehicles": 15,
+        "green_time": 15
+    },
+    "West": {
+        "vehicles": 5,
+        "green_time": 5
+    }
+}

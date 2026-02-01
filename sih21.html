@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Signal Timing Results</title>
+</head>
+<body>
+    <h1>Traffic Signal Timing per Cycle</h1>
+    <table border="1" cellpadding="10">
+        <thead>
+            <tr>
+                <th>Cycle</th>
+                <th>Vehicle Counts</th>
+                <th>Green Light Time (seconds)</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for timing in timings %}
+            <tr>
+                <td>{{ timing.cycle }}</td>
+                <td>
+                    {% for v_type, count in timing.vehicles.items() %}
+                        {{ v_type }}: {{ count }}<br>
+                    {% endfor %}
+                </td>
+                <td>{{ timing.green_time }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br>
+    <a href="{{ url_for('index') }}">Upload Another Video</a>
+</body>
+</html>
+
